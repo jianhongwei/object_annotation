@@ -1,0 +1,268 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\ObjAnno.rc2""  // 非 Microsoft Visual C++ 编辑过的资源\r\n"
+    "#include ""afxres.rc""         // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ObjAnno.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 ObjAnno"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "ObjAnno Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2010",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_OBJECTANNO_DIALOG DIALOGEX 0, 0, 623, 417
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "目标标注"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "导入图片",IDC_Btn_ImportImage,7,41,49,14
+    PUSHBUTTON      "重新标注",IDC_Btn_ReAnno,7,71,49,14
+    PUSHBUTTON      "保存标注",IDC_Btn_SaveObjInfo,7,101,49,14
+    PUSHBUTTON      "下一个",IDC_Btn_NextFile,7,131,49,14,WS_DISABLED
+    PUSHBUTTON      "撤销",IDC_Btn_Undo,7,86,49,14
+    PUSHBUTTON      "上一个",IDC_Btn_PrevFile,7,116,49,14,WS_DISABLED
+    PUSHBUTTON      "导入视频",IDC_Btn_ImportVideo,7,56,49,14
+    PUSHBUTTON      "播放",IDC_Btn_Play,65,41,49,14,WS_DISABLED
+    PUSHBUTTON      "选择播放区",IDC_Btn_SelectPlayROI,65,56,49,14,WS_DISABLED
+    PUSHBUTTON      "还原视频",IDC_Btn_OriVideo,65,71,49,14,WS_DISABLED
+    PUSHBUTTON      "加速",IDC_Btn_PlayAccelerate,65,86,49,14,WS_DISABLED
+    PUSHBUTTON      "减速",IDC_Btn_PlayDecelerate,65,101,49,14,WS_DISABLED
+    COMBOBOX        IDC_COMBO_ObjectType,59,193,55,81,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "选择目标类型",IDC_STATIC_ObjectType,7,194,42,9
+    PUSHBUTTON      "前进",IDC_Btn_PlayForward,65,116,49,14,WS_DISABLED
+    PUSHBUTTON      "后退",IDC_Btn_PlayBackward,65,130,49,14,WS_DISABLED
+    COMBOBOX        IDC_COMBO_ObjectColor,59,225,55,108,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "选择目标颜色",IDC_STATIC_ObjectColor,7,227,42,8
+    EDITTEXT        IDC_EDIT_LPID,59,262,55,12,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "输入车牌号码",IDC_STATIC_LPID,7,264,42,8
+    CONTROL         "标注背景区域",IDC_RADIO_LABEL_BGArea,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,8,178,53,10
+    CONTROL         "标注遮挡区域",IDC_RADIO_LABEL_OcclutionArea,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,62,179,54,10
+    COMBOBOX        IDC_COMBO_ModeSelect,58,11,55,45,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "标注模式选择",IDC_STATIC_ModeSelect,7,13,41,8
+    CONTROL         "",IDC_LIST_ObjectInfo,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,281,107,90
+    CONTROL         "",IDC_SLIDER_FileProgress,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS,7,151,107,10,WS_EX_STATICEDGE
+    LTEXT           "",IDC_STATIC_FileProgress,7,163,107,10,0,WS_EX_STATICEDGE
+    LTEXT           "",IDC_STATIC_Tips,7,374,106,33,0,WS_EX_STATICEDGE
+    CONTROL         "",IDC_Static_ImageShow,"Static",SS_BLACKRECT,120,7,496,403
+    GROUPBOX        "",IDC_STATIC_Group,7,7,111,403
+    LTEXT           "标注样式选择",IDC_STATIC_DrawStyle,7,28,42,8
+    COMBOBOX        IDC_COMBO_DrawStyle,58,26,55,42,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "选择部件类型",IDC_STATIC_ObjectPartType,7,211,42,8
+    COMBOBOX        IDC_COMBO_ObjectPartType,59,209,55,59,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "选择车标类型",IDC_STATIC,7,242,50,8
+    COMBOBOX        IDC_Combo_VehicleLogo_Type,59,242,54,61,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOG_ObjInfo DIALOGEX 0, 0, 351, 183
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "目标信息"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,290,142,50,14
+    PUSHBUTTON      "退出",IDCANCEL,290,160,50,14
+    CONTROL         "",IDC_STATIC_ObjInfo,"Static",SS_BLACKRECT,7,7,337,132
+    LTEXT           "目标类型",IDC_STATIC_ObjectTypeSel,7,145,33,8
+    COMBOBOX        IDC_COMBO_ObjectTypeSel,50,143,48,88,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "目标颜色",IDC_STATIC_ObjectColorSel,110,145,33,8
+    COMBOBOX        IDC_COMBO_ObjectColorSel,151,143,48,104,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "车牌号码",IDC_STATIC_LPContext,110,163,33,8
+    EDITTEXT        IDC_EDIT_LPContext,151,160,56,14,ES_AUTOHSCROLL | WS_DISABLED
+    PUSHBUTTON      "上一个",IDC_BUTTON_PrevObj,235,142,50,14
+    PUSHBUTTON      "下一个",IDC_BUTTON_NextObj,235,160,50,14
+    LTEXT           "部件类型",IDC_STATIC_ObjectPartTypeSel,7,163,33,8
+    COMBOBOX        IDC_COMBO_ObjectPartTypeSel,49,161,48,73,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "江苏视软智能系统有限公司"
+            VALUE "FileDescription", "目标标注软件"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "ObjAnno.exe"
+            VALUE "LegalCopyright", "江苏视软智能系统有限公司（SeeSoft）"
+            VALUE "OriginalFilename", "ObjAnno.exe"
+            VALUE "ProductName", "TODO: <目标标注>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_OBJECTANNO_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 616
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 410
+    END
+
+    IDD_DIALOG_ObjInfo, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 344
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_OBJECTANNO_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "关于 ObjAnno(&A)..."
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\ObjAnno.rc2"  // 非 Microsoft Visual C++ 编辑过的资源
+#include "afxres.rc"         // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

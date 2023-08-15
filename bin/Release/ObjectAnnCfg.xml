@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<ObjectType>
+  <!-- 标注目标种类 -->
+  <ObjectNum>10</ObjectNum> <!-- 标注目标种类个数 -->
+  <Object_1>Car</Object_1>
+  <Object_2>Bus</Object_2>
+  <Object_3>Mini-Bus</Object_3>
+  <Object_4>Truck</Object_4>
+  <Object_5>IVECO</Object_5>
+  <Object_6>Van</Object_6>
+  <Object_7>SUV</Object_7>
+  <Object_8>Mini-Van</Object_8>
+  <Object_9>PickUp</Object_9>
+  <Object_10>HatchBack</Object_10></ObjectType>
+<ObjectColor>
+  <!-- 标注目标颜色 -->
+  <ObjectColorNum>10</ObjectColorNum> <!-- 标注目标颜色个数 -->
+  <ObjectColor_1>Blue</ObjectColor_1>
+  <ObjectColor_2>Yellow</ObjectColor_2>
+  <ObjectColor_3>Black</ObjectColor_3>
+  <ObjectColor_4>White</ObjectColor_4>
+  <ObjectColor_5>Red</ObjectColor_5>
+  <ObjectColor_6>Green</ObjectColor_6>
+  <ObjectColor_7>Gray</ObjectColor_7>
+  <ObjectColor_8>Silver</ObjectColor_8>
+  <ObjectColor_9>LightBlue</ObjectColor_9>
+  <ObjectColor_10>Champagne</ObjectColor_10></ObjectColor>
+<ObjectPartType>
+  <!-- 标注目标部件类型 -->
+  <ObjectPartNum>4</ObjectPartNum> <!-- 标注目标部件个数 -->
+  <ObjectPart_1>Head</ObjectPart_1>
+  <ObjectPart_2>Tail</ObjectPart_2>
+  <ObjectPart_3>LicPlate</ObjectPart_3>
+  <ObjectPart_4>Vehicle-Logo</ObjectPart_4></ObjectPartType>
+</opencv_storage>

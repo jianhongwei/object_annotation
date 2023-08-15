@@ -1,0 +1,25 @@
+cmake_minimum_required(VERSION 2.8)
+
+PROJECT(ObjAnno)
+
+SET( EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin )
+SET( LIBRARY_OUTPUT_PATH    ${PROJECT_SOURCE_DIR}/bin )
+
+INCLUDE_DIRECTORIES(
+  ${PROJECT_SOURCE_DIR}/include 
+  ${PROJECT_SOURCE_DIR}/source
+  ${PROJECT_SOURCE_DIR}/source/res
+)
+
+LINK_DIRECTORIES( 
+  ${PROJECT_SOURCE_DIR}/lib
+  ${PROJECT_SOURCE_DIR}/lib/OpenCV_Static
+)
+
+SET(OpenCV_LIBS
+	opencv_core246
+	opencv_imgproc246
+	opencv_highgui246
+)
+
+ADD_SUBDIRECTORY( source )
